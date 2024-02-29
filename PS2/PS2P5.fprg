@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-28 06:24:05 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMi0yODswNjowMzozMiBQTTszNjY1"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMi0yODswNjoyNDowNSBQTTsxOzM3NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="Percent" type="Real" array="False" size=""/>
+            <declare name="Discount" type="Real" array="False" size=""/>
+            <declare name="Fprice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the price of the item &#8595;&quot;" newline="True"/>
+            <input variable="Price"/>
+            <output expression="&quot;Enter the discount percent on decimal form &#8595;&quot;" newline="True"/>
+            <input variable="Percent"/>
+            <assign variable="Discount" expression="Price * Percent"/>
+            <assign variable="Fprice" expression="Price - Discount"/>
+            <output expression="&quot;The Discount is $&quot; &amp; Discount &amp; &quot; off the regular price&quot;" newline="True"/>
+            <output expression="&quot;The final price is &#8594; $&quot; &amp; Fprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

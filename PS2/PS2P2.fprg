@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-28 05:51:48 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMi0yODswNTo0NjowMyBQTTszNjY5"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMi0yODswNTo1MTo0OCBQTTsxOzM3ODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <declare name="pay" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your name &#8595;&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the hours worked this week &#8595;&quot;" newline="True"/>
+            <input variable="hours"/>
+            <output expression="&quot;Enter your payrate &#8595;&quot;" newline="True"/>
+            <input variable="rate"/>
+            <assign variable="pay" expression="hours * rate"/>
+            <output expression="name &amp; &quot;, your pay this week is &#8594; $&quot; &amp; pay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
