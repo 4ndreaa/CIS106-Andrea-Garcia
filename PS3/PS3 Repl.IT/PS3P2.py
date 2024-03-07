@@ -1,0 +1,8 @@
+print("Enter your last name")
+name = input(" → ")
+print("Enter your midterm score")
+midt = input(" → ")
+print("Enter your final exam score")
+final = input(" → ")
+total = int(midt) + int(final)
+print(name + ", your total exam score is → " + str(total) + " points")
