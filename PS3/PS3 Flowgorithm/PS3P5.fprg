@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 04:38:24 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDozMTo1MyBQTTszNjY1"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDozODoyNCBQTTsxOzM3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rad, area, per" type="Real" array="False" size=""/>
+            <output expression="&quot;Welcome Circle Calculator !! &#9786; &quot;" newline="True"/>
+            <output expression="&quot;Please enter the radius of the circle &#8595; &quot;" newline="True"/>
+            <input variable="rad"/>
+            <assign variable="area" expression="3.14 * rad * rad"/>
+            <assign variable="per" expression="3.14 * rad * 2"/>
+            <output expression="&quot;The area of the circle is &#8594; &quot; &amp; area" newline="True"/>
+            <output expression="&quot;The perimeter of the circle is &#8594; &quot; &amp; per" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

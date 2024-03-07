@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 04:18:41 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDoxNDo0NCBQTTszNjY2"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDoxODo0MSBQTTsxOzM3NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Share, Cost, Investment" type="Real" array="False" size=""/>
+            <declare name="Stock" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the Stock Ticker Symbol &#8595; &quot;" newline="True"/>
+            <input variable="Symbol"/>
+            <output expression="&quot;Enter the number of shares &#8595; &quot;" newline="True"/>
+            <input variable="Share"/>
+            <output expression="&quot;Enter the cost per share &#8595; &quot;" newline="True"/>
+            <input variable="Cost"/>
+            <assign variable="Investment" expression="Share * Cost"/>
+            <output expression="&quot;Your investment in &quot; &amp; Symbol &amp; &quot; is worth $&quot; &amp; Investment" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

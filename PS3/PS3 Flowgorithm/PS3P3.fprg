@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-07 04:24:01 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDoyMToyOSBQTTszNjY3"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0wNzswNDoyNDowMSBQTTsxOzM3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Payment, Split" type="Real" array="False" size=""/>
+            <output expression="&quot; Thank you for completing the job !! &#9786; &quot;" newline="True"/>
+            <output expression="&quot; Enter the amount received by the client &#8595; &quot;" newline="True"/>
+            <input variable="Payment"/>
+            <assign variable="Split" expression="Payment / 3"/>
+            <output expression="&quot; The amount that each one of you should receive is &#8594; $&quot; &amp; Split" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
