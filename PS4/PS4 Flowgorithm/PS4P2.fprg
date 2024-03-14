@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-13 10:46:12 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xMzsxMDo0MDoyMyBQTTszNjU2"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xMzsxMDo0NjoxMiBQTTsxOzM3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pshare, cprice, stock, value" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the purchase price per share &#8595; &quot;" newline="True"/>
+            <input variable="pshare"/>
+            <output expression="&quot;Enter the current stock price &#8595; &quot;" newline="True"/>
+            <input variable="cprice"/>
+            <output expression="&quot;Enter the quantity of stock &#8595; &quot;" newline="True"/>
+            <input variable="stock"/>
+            <assign variable="value" expression="(cprice - pshare) * stock"/>
+            <output expression="&quot;The value of the stock is &#8594; &quot; &amp; value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

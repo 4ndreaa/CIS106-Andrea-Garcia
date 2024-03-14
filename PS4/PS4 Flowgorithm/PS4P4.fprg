@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-14 03:52:59 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xNDswMzo0OToyMyBQTTszNjY4"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xNDswMzo1Mjo1OSBQTTsxOzM3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="steps" type="Integer" array="False" size=""/>
+            <declare name="cal" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your first name &#8595; &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the steps walked today &#8595; &quot;" newline="True"/>
+            <input variable="steps"/>
+            <assign variable="cal" expression="steps * 0.25"/>
+            <output expression="name &amp; &quot;, you have burned &quot; &amp; cal &amp; &quot; calories today.&quot; &amp; ToChar(13) &amp; &quot;Good job!!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

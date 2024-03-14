@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-14 03:57:52 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xNDswMzo1MzoyMSBQTTszNjYx"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xNDswMzo1Nzo1MiBQTTsxOzM3Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fixed, cost, price, breakeven" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter fixed cost &#8595; &quot;" newline="True"/>
+            <input variable="fixed"/>
+            <output expression="&quot;Enter price per unit &#8595;&quot;" newline="True"/>
+            <input variable="price"/>
+            <output expression="&quot;Enter cost per unit &#8595; &quot;" newline="True"/>
+            <input variable="cost"/>
+            <assign variable="breakeven" expression="fixed / (price - cost)"/>
+            <output expression="&quot;The break even point is &#8594; &quot; &amp; breakeven &amp; &quot; units.&quot; &amp; ToChar(13) &amp; &quot;Have a nice day ! &#9786; &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

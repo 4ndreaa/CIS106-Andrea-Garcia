@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-14 03:49:22 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xMzsxMDo0NjoyNiBQTTszNjY1"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0xNDswMzo0OToyMiBQTTsxOzM3NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="meal, tip15, tip18, tip20, total15, total18, total20" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter how much did you pay for your meal &#8595; &quot;" newline="True"/>
+            <input variable="meal"/>
+            <assign variable="tip15" expression="meal * 0.15"/>
+            <assign variable="tip18" expression="meal * 0.18"/>
+            <assign variable="tip20" expression="meal * 0.2"/>
+            <assign variable="total15" expression="tip15 + meal"/>
+            <assign variable="total18" expression="tip18 + meal"/>
+            <assign variable="total20" expression="tip20 + meal"/>
+            <output expression="&quot;Thank you for choosing us!&quot; &amp; ToChar(13) &amp; &quot;Tip is greatly appreciated. &#9825;&quot;" newline="True"/>
+            <output expression="&quot;With a 15% ( $&quot; &amp; tip15 &amp; &quot; ) tip, your total is &#8594; $&quot; &amp; total15 &amp; &#13;&#10;ToChar(13) &amp; &quot;      With a 18% ( $&quot; &amp; tip18 &amp; &quot; ) tip, your total is &#8594; $&quot; &amp; total18 &amp; &#13;&#10;ToChar(13) &amp; &quot;With a 20% ( $&quot; &amp; tip20 &amp; &quot; ) tip, your total is &#8594; $&quot; &amp; total20" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
