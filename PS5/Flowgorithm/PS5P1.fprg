@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 05:53:07 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNTo0NDoxNCBQTTszNjYz"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNTo1MzowNyBQTTsxOzM3NzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="extprice, tax, total, uprice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter item quantity &#8595; &quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="qty &gt;= 1000">
+                <then>
+                    <assign variable="uprice" expression="3"/>
+                </then>
+                <else>
+                    <assign variable="uprice" expression="5"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty * uprice"/>
+            <assign variable="tax" expression="extprice * 0.07"/>
+            <assign variable="total" expression="extprice + tax"/>
+            <output expression="&quot;&#9702; Quantity &#8594; &quot; &amp; qty &amp; ToChar(13) &amp;  &quot;&#9702; Unit Price &#8594; $&quot; &amp; uprice &amp; ToChar(13) &amp; &quot;&#9702; Extended Price &#8594; $&quot; &amp; extprice &amp; ToChar(13) &amp; &quot;&#9702; Tax &#8594; $&quot; &amp; tax &amp; ToChar(13) &amp; &quot;&#8226; Your total is &#8594; $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

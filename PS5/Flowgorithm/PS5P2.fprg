@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 05:57:28 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNTo1MzowOSBQTTszNjY3"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNTo1NzoyOCBQTTsxOzM3ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="uprice, extprice" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the type of item (A or B) &#8595;&quot;" newline="True"/>
+            <input variable="item"/>
+            <output expression="&quot;Enter the quantity &#8595; &quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="item == &quot;A&quot;">
+                <then>
+                    <assign variable="uprice" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="uprice" expression="20"/>
+                </else>
+            </if>
+            <assign variable="extprice" expression="uprice*qty"/>
+            <output expression="&quot;&#9702; Item type &#8594; '&quot; &amp; item &amp; &quot;'&quot; &amp; ToChar(13) &amp; &quot;&#9702; Unit price &#8594; $&quot; &amp; uprice &amp; ToChar(13) &amp; &quot;&#9702; Extended price &#8594; $&quot; &amp; extprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

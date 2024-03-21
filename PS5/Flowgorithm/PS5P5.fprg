@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-03-21 06:20:25 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNjoxNDozOSBQTTszNjY4"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wMy0yMTswNjoyMDoyNSBQTTsxOzM3Njg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="dep" type="Integer" array="False" size=""/>
+            <declare name="ginc, adjinc, tax, taxinc" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter your last name &#8595; &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the number of dependents &#8595; &quot;" newline="True"/>
+            <input variable="dep"/>
+            <output expression="&quot;Enter your gross income &#8595; &quot;" newline="True"/>
+            <input variable="ginc"/>
+            <assign variable="adjinc" expression="ginc - (dep * 12000)"/>
+            <if expression="adjinc &gt; 50000">
+                <then>
+                    <assign variable="tax" expression="adjinc * 0.2"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="adjinc * 0.1"/>
+                </else>
+            </if>
+            <assign variable="taxinc" expression="tax*adjinc"/>
+            <output expression="&quot;Hello &quot; &amp; name &amp; &quot;:&quot; &amp; ToChar(13) &amp; &quot;&#9702; Gross income &#8594; $&quot; &amp; ginc &amp; ToChar(13) &amp; &quot;&#9702; Number of dependents &#8594; &quot; &amp; dep &amp; ToChar(13) &amp; &quot;&#9702; Adjusted gross income &#8594; $&quot; &amp; adjinc &amp; ToChar(13) &amp; &quot;&#9702; Income tax &#8594; $&quot; &amp; tax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
