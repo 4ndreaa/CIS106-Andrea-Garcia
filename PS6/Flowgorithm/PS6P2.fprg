@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-05 02:17:08 PM"/>
+        <attribute name="created" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMDU7MDI6MDk6MDMgUE07MjIyNA=="/>
+        <attribute name="edited" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMDU7MDI6MTc6MDggUE07MTsyMzM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty, part" type="Integer" array="False" size=""/>
+            <declare name="cost, total" type="Real" array="False" size=""/>
+            <declare name="rcost, rtotal" type="String" array="False" size=""/>
+            <output expression="&quot;Enter part number &#8595; &quot;" newline="True"/>
+            <input variable="part"/>
+            <output expression="&quot;Enter quantity &#8595; &quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="part == 10 or part == 55">
+                <then>
+                    <assign variable="cost" expression="1"/>
+                </then>
+                <else>
+                    <if expression="part == 99">
+                        <then>
+                            <assign variable="cost" expression="2"/>
+                        </then>
+                        <else>
+                            <if expression="part == 80 or part == 70">
+                                <then>
+                                    <assign variable="cost" expression="3"/>
+                                </then>
+                                <else>
+                                    <assign variable="cost" expression="5"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="qty * cost"/>
+            <comment text="round"/>
+            <assign variable="rcost" expression="Tofixed(cost,2)"/>
+            <assign variable="rtotal" expression="Tofixed(total,2)"/>
+            <comment text="output"/>
+            <output expression="&quot;&#9702; Part number &#8594; &quot; &amp; part &amp; ToChar(13) &amp; &quot;&#9702; Cost &#8594; $&quot; &amp; rcost &amp; ToChar(13) &amp; &quot;&#8226; Total cost &#8594; $&quot; &amp; rtotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

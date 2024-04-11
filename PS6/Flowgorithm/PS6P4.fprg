@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-10 11:40:07 AM"/>
+        <attribute name="created" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMTA7MTE6MzM6NDYgQU07MjIwOQ=="/>
+        <attribute name="edited" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMTA7MTE6NDA6MDcgQU07MTsyMzEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="price, totalcost" type="Real" array="False" size=""/>
+            <declare name="rtotal, rprice" type="String" array="False" size=""/>
+            <output expression="&quot;Enter amount of concert tickets &#8595; &quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="qty &gt;= 25">
+                <then>
+                    <assign variable="price" expression="50"/>
+                </then>
+                <else>
+                    <if expression="10&lt;=qty and qty&lt;=24">
+                        <then>
+                            <assign variable="price" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="5&lt;= qty and qty &lt;= 9">
+                                <then>
+                                    <assign variable="price" expression="70"/>
+                                </then>
+                                <else>
+                                    <assign variable="price" expression="75"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="totalcost" expression="qty*price"/>
+            <comment text="round"/>
+            <assign variable="rtotal" expression="Tofixed(totalcost,2)"/>
+            <assign variable="rprice" expression="Tofixed(price,2)"/>
+            <comment text="output"/>
+            <output expression="&quot;&#9702; Number of tickets &#8594; &quot; &amp; qty &amp; ToChar(13) &amp; &quot;&#9702; The price per ticket is &#8594; $&quot; &amp; rprice &amp; ToChar(13) &amp; &quot;&#8226; The total cost is &#8594; $&quot; &amp; rtotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

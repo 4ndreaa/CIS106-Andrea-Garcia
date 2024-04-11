@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-05 02:09:00 PM"/>
+        <attribute name="created" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMDU7MDE6Mzk6MzggUE07MjIzNA=="/>
+        <attribute name="edited" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMDU7MDI6MDk6MDAgUE07MTsyMzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Integer" array="False" size=""/>
+            <declare name="price, tax, total, extprice" type="Real" array="False" size=""/>
+            <declare name="rextprice, rtax, rtotal" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the quantity of widget &#8595; &quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="qty &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="qty &gt;= 5000 and qty &lt;=10000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty * price"/>
+            <assign variable="tax" expression="extprice * 0.7"/>
+            <assign variable="total" expression="tax + extprice"/>
+            <comment text="Round&#13;&#10;"/>
+            <assign variable="rextprice" expression="Tofixed(extprice,2)"/>
+            <assign variable="rtax" expression="Tofixed(tax,2)"/>
+            <assign variable="rtotal" expression="Tofixed(total,2)"/>
+            <comment text="output"/>
+            <output expression="&quot;&#9702; Extended price is &#8594; $&quot; &amp; rextPrice &amp; ToChar(13) &amp; &quot;&#9702; Tax is &#8594; $&quot; &amp; rtax &amp; ToChar(13) &amp; &quot;  &#8226; Your total is &#8594; $&quot; &amp; rtotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

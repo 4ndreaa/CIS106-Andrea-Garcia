@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-10 08:35:10 PM"/>
+        <attribute name="created" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMTA7MDg6MjY6MDYgUE07MjIyOA=="/>
+        <attribute name="edited" value="YW5kcmU7QU5EUkVBOzIwMjQtMDQtMTA7MDg6MzU6MTAgUE07MTsyMzMx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, rbonus" type="String" array="False" size=""/>
+            <declare name="salary, bonus" type="Real" array="False" size=""/>
+            <declare name="level, rate" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter last name &#8595; &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter salary &#8595; &quot;" newline="True"/>
+            <input variable="salary"/>
+            <output expression="&quot; Enter job level &#8595; &quot;" newline="True"/>
+            <input variable="level"/>
+            <if expression="level &gt;= 10">
+                <then>
+                    <assign variable="bonus" expression="0.25"/>
+                    <assign variable="rate" expression="25"/>
+                </then>
+                <else>
+                    <if expression="5 &lt;= level and level &lt;= 9">
+                        <then>
+                            <assign variable="bonus" expression="0.20"/>
+                            <assign variable="rate" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="bonus" expression="0.10"/>
+                            <assign variable="rate" expression="10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="bonus * salary"/>
+            <comment text="round"/>
+            <assign variable="rbonus" expression="Tofixed(bonus,2)"/>
+            <comment text="output"/>
+            <output expression="&quot;Hello &quot; &amp; name &amp; &quot;, you have a bonus rate of &quot; &amp; rate &amp;  &quot;%&quot; &amp; ToChar(13) &amp; &quot;Your bonus is &#8594; $&quot; &amp; rbonus &amp; ToChar(13) &amp; &quot;Congratulations!!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
