@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-13 10:20:33 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDowNTo0MiBQTTszNjYw"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDoyMDozMyBQTTsxOzM3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="answer, name" type="String" array="False" size=""/>
+            <declare name="fexam, sexam, avg, count" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to run the program? (y/n) &#8595; &quot;" newline="True"/>
+            <input variable="answer"/>
+            <assign variable="count" expression="0"/>
+            <while expression="answer == &quot;y&quot;">
+                <output expression="&quot;Enter your last name &#8595; &quot;" newline="True"/>
+                <input variable="name"/>
+                <output expression="&quot;Enter the first exam score &#8595;&quot;" newline="True"/>
+                <input variable="fexam"/>
+                <output expression="&quot;Enter the second exam score &#8595; &quot;" newline="True"/>
+                <input variable="sexam"/>
+                <assign variable="avg" expression="(fexam + sexam) / 2"/>
+                <assign variable="count" expression="count + 1"/>
+                <output expression="&quot;Hello, &quot; &amp; name &amp; &quot;!&quot; &amp; &quot;Your average score is &#8594; &quot; &amp; avg" newline="True"/>
+                <output expression="&quot;Do you want to run the program? (y/n) &#8595; &quot;" newline="True"/>
+                <input variable="answer"/>
+            </while>
+            <output expression="&quot;  &#8594; &quot; &amp; count &amp; &quot; students ran this program.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

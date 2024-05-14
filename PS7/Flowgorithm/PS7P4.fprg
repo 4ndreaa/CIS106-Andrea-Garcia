@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-13 10:31:49 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDoyMDozNSBQTTszNjU5"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDozMTo0OSBQTTsxOzM3NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="answer, name" type="String" array="False" size=""/>
+            <declare name="count, sum, hours, pay, xthours, xtpay, grossp, avg" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to run this program? (y/n)&quot;" newline="True"/>
+            <input variable="answer"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="answer == &quot;y&quot;">
+                <output expression="&quot;Enter your last name &#8595; &quot;" newline="True"/>
+                <input variable="name"/>
+                <output expression="&quot;Enter the hours worked &#8595; &quot;" newline="True"/>
+                <input variable="hours"/>
+                <output expression="&quot;Enter your pay rate &#8595; &quot;" newline="True"/>
+                <input variable="pay"/>
+                <if expression="hours &gt; 40">
+                    <then>
+                        <assign variable="xthours" expression="hours - 40"/>
+                        <assign variable="xtpay" expression="pay * 1.5"/>
+                        <assign variable="xthours" expression="xthours * xtpay"/>
+                        <assign variable="grossp" expression="(hours * pay) + xthours"/>
+                        <output expression="&quot;Hello, &quot; &amp; name &amp; &quot;! &quot; &amp; &quot;Your gross pay is $&quot; &amp; grossp" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="grossp" expression="hours * pay"/>
+                        <output expression="&quot;Hello, &quot; &amp; name &amp; &quot;! &quot; &amp; &quot;Your gross pay is $&quot; &amp; grossp" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="count" expression="count + 1"/>
+                <assign variable="sum" expression="sum + grossp"/>
+                <output expression="&quot;Do you want to run this program? (y/n)&quot;" newline="True"/>
+                <input variable="answer"/>
+            </while>
+            <output expression="&quot;&#9702; The number of employees who run this program is &#8594; &quot; &amp; count" newline="True"/>
+            <output expression="&quot;&#9702; The sum of all gross pay is $&quot; &amp; sum" newline="True"/>
+            <assign variable="avg" expression="sum / count"/>
+            <output expression="&quot;&#9702; The average pay is $&quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre_kelpbuj"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-05-13 10:05:40 PM"/>
+        <attribute name="created" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDowMToyOSBQTTszNjYx"/>
+        <attribute name="edited" value="YW5kcmVfa2VscGJ1ajtERVNLVE9QLTExSEs1SEQ7MjAyNC0wNS0xMzsxMDowNTo0MCBQTTsxOzM3NjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start, inc, end" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a start value &#8595; &quot;" newline="True"/>
+            <input variable="start"/>
+            <output expression="&quot;Enter an increment value &#8595; &quot;" newline="True"/>
+            <input variable="inc"/>
+            <output expression="&quot;Enter a stop value &#8595;&quot;" newline="True"/>
+            <input variable="end"/>
+            <while expression="start &lt; end">
+                <assign variable="start" expression="start + inc"/>
+                <output expression="&quot;&#9702; &quot; &amp; start" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
