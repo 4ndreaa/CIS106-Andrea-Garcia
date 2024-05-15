@@ -1,0 +1,12 @@
+Adams
+100000
+Bills
+75000
+Colone
+85000
+Johnson
+90000
+Williams
+75000
+Miller
+150000
